@@ -11,7 +11,7 @@ import {
 export const register = (user, history) => async (dispatch) => {
   dispatch({ type: LOAD_USER });
   try {
-    let result = await axios.post("/api/user/register", user);
+    let result = await axios.post("/auth/register", user);
     //succees action
     dispatch({ type: REGISTER_USER, payload: result.data }); //{user,token,msg}
     history.push("/profile");
@@ -24,7 +24,7 @@ export const register = (user, history) => async (dispatch) => {
 export const login = (user, history) => async (dispatch) => {
   dispatch({ type: LOAD_USER });
   try {
-    let result = await axios.post("/api/user/login", user);
+    let result = await axios.post("/auth/login", user);
     dispatch({ type: LOGIN_USER, payload: result.data }); //{msg,token,user}
     history.push("./profile");
   } catch (error) {

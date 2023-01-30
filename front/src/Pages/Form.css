@@ -1,0 +1,169 @@
+.nr{
+    width: 400px;
+    margin-left: 250px;
+    font-family: serif;
+    color: brown;
+}
+
+.recu{
+
+    font-size: 22px;
+      background-image:url("bg.jpg") ;
+    background-repeat: repeat;
+  
+ 
+}
+
+.trec{
+ margin-left: 400px;
+}
+
+.recu2{
+    font-size: 20px;
+    background-image:url("bg.jpg") ;
+  background-repeat: repeat;
+}
+
+
+.allcrois{
+  margin-left: 60px;
+  margin-top: 20px;
+}
+.croisimg{
+  width:800px;
+  height: 300px;
+  
+ }
+.croisb{
+  font-size: 40px;
+
+}
+ .croisdet{
+  margin-left: 5px;
+  font-size: 20px;
+  width: 400px;
+  
+ }
+ .croisp{
+  font-size: 25px;
+  color: blueviolet;
+ }
+ .croisbtn{
+  margin-top: 40px;
+  background-color: rgb(18, 197, 241);
+  border: none;
+  height: 40px;
+  width: 400px;
+  margin-left: 1px;
+ }
+
+ img.hover-img{
+  position: absolute;
+  opacity: 0;
+ }
+ .Box:hover img{
+  opacity:0;
+ }
+ .Box:hover img.hover-img{
+  opacity: 1;
+  margin-left: 0px;
+ }
+
+ .escales{
+  font-size: 30px;
+  margin-top: 40px;
+  margin-left: 16px;
+  }
+
+  .depart{
+    color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+  }
+
+  .imvoc{
+margin-left: 350px;
+margin-top: -70px;
+
+  }
+
+  .bhome{
+    background-image:url("bg.jpg") ;
+    background-repeat: repeat;
+width: 100%;
+height: 1500px;
+margin-left: -0.1%;
+
+  }
+
+  .p1{
+    width: 1000px;
+    height: 400px;
+  }
+  .p3{
+    width: 350px;
+    height: 400px;
+
+  }
+  .g1{
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+    margin-left: 60px;
+  }
+
+  .weather-data{
+    background-image:url("sunny.jpg") ;
+    height: 1000px;
+    width: 1000px;
+    background-repeat: no-repeat;
+  }
+
+  .weather{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+  }
+
+  .bhome2{
+    background-image:url("bg.jpg") ;
+    background-repeat: repeat;
+  }
+
+  .cityclass{
+    width: 800px;
+    height: 60px;
+  }
+  .vocal{
+    margin-left: 250px;
+   }
+   .hvocal{
+    margin-left: 300px;
+    width: 400px;
+
+   }
+
+   .feedback{
+    width: 800px;
+    height: 200px;
+    margin-top: 60px;
+    margin-left: 240px;
+   }
+
+   .btnfeedback{
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 40px;
+
+   }
+
+   .imgfeedback{
+    width: 500px;
+    height: 270px;
+    margin-left: 130px;
+    margin-bottom: 40px;
+   }

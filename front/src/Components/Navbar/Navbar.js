@@ -8,44 +8,69 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isAuth = useSelector((state) => state.userReducer.isAuth);
   return (
-    <header>
-      <h2>
-        <i className="icon-plane" />
-        <Link to="/">Authentification</Link>
-      </h2>
-      <nav>
-        <ul>
-          <li>Hotels</li>
+    <div class='tm-top-bar' id='tm-top-bar'>
+      <div class='container'>
+        <div class='row'>
+          <nav class='navbar navbar-expand-lg narbar-light'>
+            <a class='navbar-brand mr-auto' href='#'>
+              <img src='img/logo.png' alt='Site logo' />
+              Level
+            </a>
+            <button
+              type='button'
+              id='nav-toggle'
+              class='navbar-toggler collapsed'
+              data-toggle='collapse'
+              data-target='#mainNav'
+              aria-expanded='false'
+              aria-label='Toggle navigation'
+            >
+              <span class='navbar-toggler-icon'></span>
+            </button>
+            <div id='mainNav' class='collapse navbar-collapse tm-bg-white d-flex flex-end'>
+              <ul class='navbar-nav ml-auto'>
+                <li class='nav-item'>
+                  <a class='nav-link' href='/'>
+                    Home <span class='sr-only'>(current)</span>
+                  </a>
+                </li>
+                <li class='nav-item'>
+                  <a class='nav-link' href='/Vol'>
+                    Vols
+                  </a>
+                </li>
+                <li class='nav-item'>
+                  <a class='nav-link' href='/Hotels'>
+                    Hotels
+                  </a>
+                </li>
+                <li class='nav-item'>
+                  <a class='nav-link' href='/Cruiser'>
+                    Crusier
+                  </a>
+                </li>
+                <li class='nav-item'>
+                  <a class='nav-link' href='/Register'>
+                    Register
+                  </a>
+                </li>
+                <li class='nav-item'>
+                  <a class='nav-link' href='/Login'>
+                    Login
+                  </a>
+                </li>
 
-          <li>Flights</li>
-
-          <ul className="ul_auth">
-            {isAuth ? (
-              <ul>
-                <Link to="/">
-                  {" "}
-                  <li className="auth" onClick={() => dispatch(logout())}>
-                    LOGOUT{" "}
-                  </li>
-                </Link>
+                <li class='nav-item'>
+                  <a class='nav-link' href='#tm-section-6'>
+                    Contact Us
+                  </a>
+                </li>
               </ul>
-            ) : (
-              <ul>
-                {" "}
-                <Link to="/register">
-                  {" "}
-                  <li className="auth">Register </li>
-                </Link>
-                <Link to="/login">
-                  {" "}
-                  <li className="auth">LogIn </li>
-                </Link>
-              </ul>
-            )}
-          </ul>
-        </ul>
-      </nav>
-    </header>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
   );
 };
 
