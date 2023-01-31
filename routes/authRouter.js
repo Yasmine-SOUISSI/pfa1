@@ -7,4 +7,8 @@ router.post("/login", login);
 
 router.post("/register", register);
 
+router.get("/current", isAuth, (req, res) => {
+  res.send({ msg: "authorized", user: req.user });
+});
+
 module.exports = router;

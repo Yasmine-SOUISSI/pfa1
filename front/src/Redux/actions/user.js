@@ -14,10 +14,9 @@ export const register = (user, history) => async (dispatch) => {
     let result = await axios.post("/auth/register", user);
     //succees action
     dispatch({ type: REGISTER_USER, payload: result.data }); //{user,token,msg}
-    history.push("/profile");
   } catch (error) {
     // fail
-    dispatch({ type: FAIL_USER, payload: error.response.data.errors });
+    dispatch({ type: FAIL_USER, payload: error});
   }
 };
 
@@ -25,6 +24,7 @@ export const login = (user, navigate) => async (dispatch) => {
   dispatch({ type: LOAD_USER });
   try {
     let result = await axios.post("/auth/login", user);
+    localStorage.setItem("token", result.data.token);
     dispatch({ type: LOGIN_USER, payload: result.data }); //{msg,token,user}
     navigate("/profile");
   } catch (error) {

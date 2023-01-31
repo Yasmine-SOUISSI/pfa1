@@ -2,7 +2,7 @@ const userSchema = require("../models/userSchema");
 const jwt = require("jsonwebtoken");
 const isAuth = async (req, res, next) => {
   const token = req.headers["authorization"]
-    ? req.headers["authorization0"]
+    ? req.headers["authorization"]
     : null;
 
   if (!token) {

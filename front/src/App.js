@@ -22,6 +22,13 @@ import { Analyse } from "./Pages/Analyse";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { current } from "./Redux/actions/user";
+import EventPage from "./Admin/pages/EventPage";
+import UserPage from "./Admin/pages/UserPage";
+import SessionsPage from "./Admin/pages/SessionsPage";
+import ThemeProvider from "./Admin/theme";
+import AddUserPage from "./Admin/pages/AddUserPage";
+import BlogPage from "./Admin/pages/BlogPage";
+import Blog from "./Admin/pages/Blog";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,14 +36,13 @@ function App() {
     dispatch(current());
   }, [dispatch]);
   return (
-    <div>
+    <>
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Landpage />} />
         <Route path='/register' element={<Register />} />
         <Route path='/Hotels' element={<Hotels />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/profile' element={<Profile />} />
         <Route path='/*' element={<Errors />} />
         <Route path='/Formulaire/:de/:a/:ref' element={<FormVol />} />
 
@@ -69,8 +75,64 @@ function App() {
         <Route path='/chat' element={<Chat />} />
         <Route path='/Weather' element={<Weather />} />
         <Route path='/Analyse' element={<Analyse />} />
+        <Route
+          path='/users'
+          element={
+            <ThemeProvider>
+              <UserPage />
+            </ThemeProvider>
+          }
+        />
+        <Route
+          path='/sessions'
+          element={
+            <ThemeProvider>
+              <SessionsPage />
+            </ThemeProvider>
+          }
+        />
+        <Route
+          path='/events'
+          element={
+            <ThemeProvider>
+              <EventPage />
+            </ThemeProvider>
+          }
+        />
+        <Route
+          path='/newUser'
+          element={
+            <ThemeProvider>
+              <AddUserPage />
+            </ThemeProvider>
+          }
+        />
+        <Route
+          path='/profile'
+          element={
+            <ThemeProvider>
+              <Profile />
+            </ThemeProvider>
+          }
+        />
+        <Route
+          path='/blogs'
+          element={
+            <ThemeProvider>
+              <BlogPage />
+            </ThemeProvider>
+          }
+        />
+        <Route
+          path='/:blogId'
+          element={
+            <ThemeProvider>
+              <Blog />
+            </ThemeProvider>
+          }
+        />
       </Routes>
-    </div>
+    </>
   );
 }
 

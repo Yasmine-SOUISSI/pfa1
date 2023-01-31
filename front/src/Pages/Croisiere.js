@@ -1,4 +1,3 @@
-import Axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";

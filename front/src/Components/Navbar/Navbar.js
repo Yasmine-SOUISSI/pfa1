@@ -49,10 +49,22 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className='nav-item'>
-                  <a className='nav-link' href='#tm-section-6'>
-                    Contact Us
+                  <a className='nav-link' href='/chat'>
+                    Chat
                   </a>
                 </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='/Analyse'>
+                    Analyse
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  {" "}
+                  <a className='nav-link' href='/Weather'>
+                    Weather
+                  </a>
+                </li>
+
                 {!isAuth && (
                   <li className='nav-item'>
                     <a className='nav-link' href='/Register'>
@@ -76,6 +88,16 @@ const Navbar = () => {
                         }}
                       >
                         Logout
+                      </a>
+                    </li>
+                    <li className='nav-item'>
+                      <a className='nav-link' href='/blogs'>
+                        Blog
+                      </a>
+                    </li>
+                    <li className='nav-item'>
+                      <a className='nav-link' href='/users'>
+                        Users
                       </a>
                     </li>
                   </>
