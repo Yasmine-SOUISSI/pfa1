@@ -21,14 +21,14 @@ export const register = (user, history) => async (dispatch) => {
   }
 };
 
-export const login = (user, history) => async (dispatch) => {
+export const login = (user, navigate) => async (dispatch) => {
   dispatch({ type: LOAD_USER });
   try {
     let result = await axios.post("/auth/login", user);
     dispatch({ type: LOGIN_USER, payload: result.data }); //{msg,token,user}
-    history.push("./profile");
+    navigate("/profile");
   } catch (error) {
-    dispatch({ type: FAIL_USER, payload: error.response.data.errors });
+    dispatch({ type: FAIL_USER, payload: error });
   }
 };
 
@@ -39,7 +39,7 @@ export const current = () => async (dispatch) => {
         authorization: localStorage.getItem("token"),
       },
     };
-    let result = await axios.get("/api/user/current", config);
+    let result = await axios.get("/auth/current", config);
     dispatch({ type: CURRENT_USER, payload: result.data }); //{msg , user}
   } catch (error) {
     dispatch({ type: FAIL_USER, payload: error.response.data });

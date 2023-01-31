@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login, videErrors } from "../../Redux/actions/user";
 import Errors from "../../Components/Errors/Error";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
-const Login = ({ history }) => {
+const Login = ({}) => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({});
   const errors = useSelector((state) => state.userReducer.errors);
   const dispatch = useDispatch();
@@ -15,13 +16,15 @@ const Login = ({ history }) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(login(user, history));
+    dispatch(login(user, navigate));
   };
+
   useEffect(() => {
     return () => {
       dispatch(videErrors());
     };
   }, []);
+  
   return (
     <div className='container-fluid'>
       <div className='row no-gutter'>

@@ -119,11 +119,11 @@ export function Welcome() {
         <table>
           <tr>
             <td>
-              <img src={v} height='250px' width='800px' class='' />
+              <img src={v} height='250px' width='800px' className='' />
             </td>
 
             <td>
-              <img src={vocal} height='200px' width='200px' class='imvoc' />
+              <img src={vocal} height='200px' width='200px' className='imvoc' />
             </td>
           </tr>
 
@@ -148,7 +148,7 @@ export function Welcome() {
           <tr>
             <td>
               <div className='g1'>
-                <img src={loc} height='60px' width='60px' class='' />
+                <img src={loc} height='60px' width='60px' className='' />
                 <br></br>
                 Une proximité des clients : 34 points de vente sur tout le
                 territoire tunisien
@@ -156,7 +156,7 @@ export function Welcome() {
             </td>
             <td>
               <div className='g1'>
-                <img src={call} height='60px' width='60px' class='' />
+                <img src={call} height='60px' width='60px' className='' />
                 <br></br>
                 Un call-center toujours à l'écoute de nos clients même en
                 période de grand flux.
@@ -164,21 +164,21 @@ export function Welcome() {
             </td>
             <td>
               <div className='g1'>
-                <img src={dollar} height='60px' width='60px' class='' />
+                <img src={dollar} height='60px' width='60px' className='' />
                 <br></br>
                 Des tarifs les plus attractifs du marché (en TTC)
               </div>
             </td>{" "}
             <td>
               <div className='g1'>
-                <img src={par} height='60px' width='60px' class='' />
+                <img src={par} height='60px' width='60px' className='' />
                 <br></br>
                 Une exhaustivité de l'offre Plus de 884.000 hôtels dans le monde
               </div>
             </td>
             <td>
               <div className='g1'>
-                <img src={ok} height='60px' width='60px' class='' />
+                <img src={ok} height='60px' width='60px' className='' />
                 <br></br>
                 Plus de 18 ans d'expérience sur le marché
               </div>
@@ -191,14 +191,14 @@ export function Welcome() {
         <h2>Nos Partenaires</h2>
 
         <marquee>
-          <img src={h1} height='300px' width='600px' class='' />
-          <img src={h2} height='300px' width='600px' class='' />
-          <img src={h4} height='300px' width='600px' class='' />
-          <img src={h7} height='300px' width='600px' class='' />
-          <img src={h8} height='300px' width='600px' class='' />
-          <img src={h3} height='300px' width='600px' class='' />
+          <img src={h1} height='300px' width='600px' className='' />
+          <img src={h2} height='300px' width='600px' className='' />
+          <img src={h4} height='300px' width='600px' className='' />
+          <img src={h7} height='300px' width='600px' className='' />
+          <img src={h8} height='300px' width='600px' className='' />
+          <img src={h3} height='300px' width='600px' className='' />
 
-          <img src={h6} height='300px' width='600px' class='' />
+          <img src={h6} height='300px' width='600px' className='' />
         </marquee>
       </div>
     </body>

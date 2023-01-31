@@ -40,7 +40,7 @@ function App() {
         <Route path='/*' element={<Errors />} />
         <Route path='/Formulaire/:de/:a/:ref' element={<FormVol />} />
 
-        <Route path='/Croisieres' exact element={<Croisiere />} />
+        <Route path='/Cruiser' exact element={<Croisiere />} />
         <Route
           path='/Details-croisiere/:depart/:date/:escale1/:escale2/:escale3/:escale4/:escale5/:escale6/:prix'
           element={<DetailCrois />}

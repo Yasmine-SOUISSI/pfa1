@@ -24,20 +24,20 @@ export function FormVol() {
   return (
     <form
       action={`/recu/${ref}/${prenom}/${name}/${Numero}/${classe}`}
-      class='bn'
+      className='bn'
     >
       <br></br>
-      <h3 class='x'>
+      <h3 className='x'>
         Vol de <b>{de}</b> à <b>{a}</b>
       </h3>
       <br></br>
 
-      <div class='form-group wid'>
+      <div className='form-group wid'>
         <label>Prenom :</label>
         <input
           type='text'
           required
-          class='form-control bl'
+          className='form-control bl'
           onChange={(event) => {
             setprenom(event.target.value);
           }}
@@ -47,7 +47,7 @@ export function FormVol() {
         <input
           type='text'
           required
-          class='form-control bl'
+          className='form-control bl'
           onChange={(event) => {
             setnom(event.target.value);
           }}
@@ -57,7 +57,7 @@ export function FormVol() {
         <input
           type='text'
           required
-          class='form-control bl'
+          className='form-control bl'
           onChange={(event) => {
             setNumero(event.target.value);
           }}
@@ -67,17 +67,17 @@ export function FormVol() {
         <input
           type='email'
           required
-          class='form-control bl'
+          className='form-control bl'
           onChange={(event) => {
             setemail(event.target.value);
           }}
         />
         <br></br>
       </div>
-      <div class='form-group wid'>
+      <div className='form-group wid'>
         <label for='exampleFormControlSelect1'>Classe :</label>
         <select
-          class='form-control bl'
+          className='form-control bl'
           value={classe}
           required
           onChange={(event) => {

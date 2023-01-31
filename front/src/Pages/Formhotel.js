@@ -17,17 +17,17 @@ export function Formhotel() {
   const [Chambre, setChambre] = useState("double");
 
   return (
-    <div class='recu2'>
+    <div className='recu2'>
       <br></br>
       <table>
         <tr>
           <td>
-            <div class='star'>
+            <div className='star'>
               <h3>{star.slice(5 - Stars)} </h3>{" "}
             </div>
           </td>
           <td className=''>
-            <div class='nr'>
+            <div className='nr'>
               <h2>
                 <b>{Nom} </b>
               </h2>
@@ -39,12 +39,12 @@ export function Formhotel() {
       <form
         action={`/Reservation/${Nom}/${prenom}/${name}/${numero}/${de}/${a}/${nombre}/${Chambre}/${prix}`}
       >
-        <div class='form-group wid'>
+        <div className='form-group wid'>
           <label>Prenom :</label>
           <input
             type='text'
             required
-            class='form-control bl'
+            className='form-control bl'
             onChange={(event) => {
               setprenom(event.target.value);
             }}
@@ -54,7 +54,7 @@ export function Formhotel() {
           <input
             type='text'
             required
-            class='form-control bl'
+            className='form-control bl'
             onChange={(event) => {
               setnom(event.target.value);
             }}
@@ -64,14 +64,14 @@ export function Formhotel() {
           <input
             type='text'
             required
-            class='form-control bl'
+            className='form-control bl'
             onChange={(event) => {
               setnumero(event.target.value);
             }}
           />
           <br></br>
           <label>Email :</label>
-          <input type='email' required class='form-control bl' />
+          <input type='email' required className='form-control bl' />
           <br></br>
           De :{" "}
           <input
@@ -97,7 +97,7 @@ export function Formhotel() {
           <input
             type='Number'
             required
-            class='form-control bl'
+            className='form-control bl'
             onChange={(event) => {
               setnombre(event.target.value);
             }}
@@ -105,7 +105,7 @@ export function Formhotel() {
           <br></br>
           <label for='exampleFormControlSelect1'>Chambre :</label>
           <select
-            class='form-control bl'
+            className='form-control bl'
             value={Chambre}
             onChange={(event) => {
               setChambre(event.target.value);

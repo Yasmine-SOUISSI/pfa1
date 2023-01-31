@@ -7,12 +7,12 @@ const PopularDestinations = () => {
 
   return (
     <section id='popular-destination'>
-      <h1 class='title'>destinations populaires</h1>
-      <div class='content'>
+      <h1 className='title'>destinations populaires</h1>
+      <div className='content'>
         {destinations.map((destination) => (
-          <div class='box'>
+          <div className='box'>
             <img src='images/paris.jpg' alt='' />
-            <div class='content'>
+            <div className='content'>
               <div>
                 <h4>Paris</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>

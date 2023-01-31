@@ -8,63 +8,84 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isAuth = useSelector((state) => state.userReducer.isAuth);
   return (
-    <div class='tm-top-bar' id='tm-top-bar'>
-      <div class='container'>
-        <div class='row'>
-          <nav class='navbar navbar-expand-lg narbar-light'>
-            <a class='navbar-brand mr-auto' href='#'>
+    <div className='tm-top-bar' id='tm-top-bar'>
+      <div className='container'>
+        <div className='row'>
+          <nav className='navbar navbar-expand-lg narbar-light'>
+            <a className='navbar-brand mr-auto' href='#'>
               <img src='img/logo.png' alt='Site logo' />
               Level
             </a>
             <button
               type='button'
               id='nav-toggle'
-              class='navbar-toggler collapsed'
-              data-toggle='collapse'
-              data-target='#mainNav'
-              aria-expanded='false'
-              aria-label='Toggle navigation'
+              className='navbar-toggler collapsed'
             >
-              <span class='navbar-toggler-icon'></span>
+              <span className='navbar-toggler-icon'></span>
             </button>
-            <div id='mainNav' class='collapse navbar-collapse tm-bg-white d-flex flex-end'>
-              <ul class='navbar-nav ml-auto'>
-                <li class='nav-item'>
-                  <a class='nav-link' href='/'>
-                    Home <span class='sr-only'>(current)</span>
+            <div
+              id='mainNav'
+              className='collapse navbar-collapse tm-bg-white d-flex flex-end'
+            >
+              <ul className='navbar-nav ml-auto'>
+                <li className='nav-item'>
+                  <a className='nav-link' href='/'>
+                    Home <span className='sr-only'>(current)</span>
                   </a>
                 </li>
-                <li class='nav-item'>
-                  <a class='nav-link' href='/Vol'>
+                <li className='nav-item'>
+                  <a className='nav-link' href='/Vols'>
                     Vols
                   </a>
                 </li>
-                <li class='nav-item'>
-                  <a class='nav-link' href='/Hotels'>
+                <li className='nav-item'>
+                  <a className='nav-link' href='/Hotels'>
                     Hotels
                   </a>
                 </li>
-                <li class='nav-item'>
-                  <a class='nav-link' href='/Cruiser'>
+                <li className='nav-item'>
+                  <a className='nav-link' href='/Cruiser'>
                     Crusier
                   </a>
                 </li>
-                <li class='nav-item'>
-                  <a class='nav-link' href='/Register'>
-                    Register
-                  </a>
-                </li>
-                <li class='nav-item'>
-                  <a class='nav-link' href='/Login'>
-                    Login
-                  </a>
-                </li>
-
-                <li class='nav-item'>
-                  <a class='nav-link' href='#tm-section-6'>
+                <li className='nav-item'>
+                  <a className='nav-link' href='#tm-section-6'>
                     Contact Us
                   </a>
                 </li>
+                {!isAuth && (
+                  <li className='nav-item'>
+                    <a className='nav-link' href='/Register'>
+                      Register
+                    </a>
+                  </li>
+                )}
+                {isAuth ? (
+                  <>
+                    <li className='nav-item'>
+                      <a className='nav-link' href='/Profile'>
+                        Profile
+                      </a>
+                    </li>
+                    <li className='nav-item'>
+                      <a
+                        className='nav-link'
+                        href='/'
+                        onClick={() => {
+                          dispatch(logout());
+                        }}
+                      >
+                        Logout
+                      </a>
+                    </li>
+                  </>
+                ) : (
+                  <li className='nav-item'>
+                    <a className='nav-link' href='/Login'>
+                      Login
+                    </a>
+                  </li>
+                )}
               </ul>
             </div>
           </nav>

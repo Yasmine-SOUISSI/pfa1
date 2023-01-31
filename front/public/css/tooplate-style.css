@@ -149,7 +149,7 @@ p {
 }
 
 .tm-top-bar .navbar-expand-lg .navbar-nav .nav-link {
-  padding: 50px 35px;
+  padding: 20px 35px;
 }
 
 .tm-top-bar {
@@ -160,7 +160,7 @@ p {
   padding: 0;
   z-index: 10000;
   transition: all 0.2s ease-in-out;
-  height: 119px;
+  height: 79px;
   background: white;
 }
 
@@ -243,7 +243,20 @@ p {
   padding: 13px 30px;
   text-transform: uppercase;
 }
-
+.btn-secondary {
+  background-color: #1f3646;
+  border-color: #1f3646;
+  border-radius: 0;
+  color: #ee5057;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 13px 30px;
+  text-transform: uppercase;
+}
+.mt-10 {
+  margin-top: 10px;
+}
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {

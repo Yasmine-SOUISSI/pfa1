@@ -57,8 +57,8 @@ export function DetailHotel() {
   return (
     <html>
       <body>
-        <div class='bn'>
-          <div class='star'>
+        <div className='bn'>
+          <div className='star'>
             <table>
               <tr>
                 <td>
@@ -97,11 +97,11 @@ export function DetailHotel() {
                     <table className='us'>
                       <tr>
                         <td>
-                          <img src={userimg} class='av' alt='' />{" "}
+                          <img src={userimg} className='av' alt='' />{" "}
                           <span>{c.user}</span>
                         </td>
 
-                        <div class='Acom'>
+                        <div className='Acom'>
                           <div className='com'>
                             <span className='c'>{c.msg}</span>
                           </div>
@@ -119,7 +119,7 @@ export function DetailHotel() {
                   </div>
                 );
               })}
-            <div class='space'>
+            <div className='space'>
               <input
                 type='text'
                 className='yn'
@@ -159,7 +159,7 @@ export function DetailHotel() {
                 height='80px'
               />
 
-              <button class='yn ' onClick={addtolist}>
+              <button className='yn ' onClick={addtolist}>
                 Commenter
               </button>
 
